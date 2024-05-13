@@ -1,0 +1,32 @@
+terraform workspace list #We need to do init first
+
+Subcommands:
+    delete    Delete a workspace
+    list      List Workspaces
+    new       Create a new workspace
+    select    Select a workspace
+    show      Show the name of the current workspace
+
+terraform workspace new dev (Creates dev workspace)
+terraform workspace select dev (Switch to this)
+
+If we are using workspace then we should be very careful about variables
+
+If need safety then Create:  seperate repo for dev, seperate repo for production
+
+workspace, tfvars  --> Suitable for Small projects
+-------------------
+adv --> less code, Can Switch easily between workspace
+dis --> should be more careful while dealing variables and tfvars. chance of doing something wrong in prod
+
+seperate repos --> For large / big organisations this suits
+------------------
+adv --> clear seperation of environments
+dis --> duplication of code
+
+provisioners
+-------------------
+Using terraform we are creating instances....
+
+1. local-exec --> where you are running terraform command i.e local
+2. remote-exec --> inside remote machine
